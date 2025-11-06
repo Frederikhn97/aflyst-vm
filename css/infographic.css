@@ -33,6 +33,27 @@
   margin: 0 0 1.2rem 0;
   padding: 0;
 }
+.fadeIn {
+  animation: fadeIn_kf 2s linear;
+}
+@keyframes fadeIn_kf {
+}
+
+.hide {
+  visibility: hidden;
+}
+.fadeIn {
+  animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Starter usynligt */
+  }
+  to {
+    opacity: 1; /* Ender synligt */
+  }
+}
+
 .info-box {
   padding: 1.5rem 1rem 0.5rem 1rem;
   background-color: var(--color-infobox-1-bg);

@@ -1,101 +1,127 @@
 // ---------- HOVED ----------
 
-// Tjek at elementet findes
 console.log(document.querySelector("#hotspothovede"));
 
-// Lyt efter når musen går over elementet
 document
   .querySelector("#hotspothovede")
   .addEventListener("mouseover", mouseOverHead);
 
-// Funktion der kører når musen går over elementet
-function mouseOverHead() {
-  console.log("mouseOverHead");
-  document.querySelector("#hotspothovede").style.fill = "blue"; // farve når musen er over
-}
-
-// Lyt efter når musen forlader elementet
 document
   .querySelector("#hotspothovede")
   .addEventListener("mouseout", mouseOutHead);
-
-// Funktion der kører når musen går væk
-function mouseOutHead() {
-  console.log("mouseOutHead");
-  document.querySelector("#hotspothovede").style.fill = "red"; // farve når musen går væk
-}
-
-// Lyt efter klik på elementet
 document.querySelector("#hotspothovede").addEventListener("click", clickHead);
 
-// Funktion der kører når man klikker
+function mouseOverHead() {
+  console.log("mouseOverHead");
+  document.querySelector("#hotspothovede").style.fill = "blue";
+}
+function mouseOutHead() {
+  console.log("mouseOutHead");
+  document.querySelector("#hotspothovede").style.fill = "red";
+}
+
 function clickHead() {
   console.log("clickHead");
+
+  document.querySelector("#efficiency").classList.remove("hide");
+  document.querySelector("#efficiency").classList.add("fadeIn");
+  document.querySelector("#requirement").classList.remove("hide");
+  document.querySelector("#requirement").classList.add("fadeIn");
+
+  document
+    .querySelector("#requirement")
+    .addEventListener("animationend", cleanup);
+
   document.querySelector(".info-text h2").textContent = "Hoved";
   document.querySelector(".info-text p").textContent =
     "Her kan du læse om hovedområdet og dets betydning.";
   document.querySelector("#efficiency").innerHTML =
     "<h3>Info</h3><p>Hovedet styrer hele reaktionen.</p>";
 }
+
 // ---------- ARM ----------
 
-// Tjek at elementet findes
 console.log(document.querySelector("#hotspotarm"));
 
-// Lyt efter når musen går over elementet
-// ---------- ARM ----------
-
-// Lyt efter når musen går over elementet
 document
   .querySelector("#hotspotarm")
   .addEventListener("mouseover", mouseOverArm);
+document.querySelector("#hotspotarm").addEventListener("mouseout", mouseOutArm);
+document.querySelector("#hotspotarm").addEventListener("click", clickArm);
 
-// Funktion der kører når musen går over elementet
 function mouseOverArm() {
   console.log("mouseOverArm");
-  document.querySelector("#hotspotarm").style.fill = "blue"; // farve når musen er over
+  document.querySelector("#hotspotarm").style.fill = "blue";
 }
 
-// Lyt efter når musen forlader elementet
-document.querySelector("#hotspotarm").addEventListener("mouseout", mouseOutArm);
-
-// Funktion der kører når musen går væk
 function mouseOutArm() {
   console.log("mouseOutArm");
-  document.querySelector("#hotspotarm").style.fill = "red"; // farve når musen går væk
+  document.querySelector("#hotspotarm").style.fill = "red";
 }
+function clickArm() {
+  console.log("clickArm");
 
-// Lyt efter klik på elementet
-document.querySelector("#hotspotarm").addEventListener("click", clickArm);
+  document.querySelector("#efficiency").classList.remove("hide");
+  document.querySelector("#efficiency").classList.add("fadeIn");
+  document.querySelector("#requirement").classList.remove("hide");
+  document.querySelector("#requirement").classList.add("fadeIn");
+
+  document
+    .querySelector("#requirement")
+    .addEventListener("animationend", cleanup);
+
+  document.querySelector(".info-text h2").textContent = "Arm";
+  document.querySelector(".info-text p").textContent =
+    "Armen repræsenterer handling og samarbejde.";
+  document.querySelector("#efficiency").innerHTML =
+    "<h3>Effektivitet</h3><p>Armen udfører arbejdet – klar til indsats.</p>";
+}
 
 // ---------- SKULDER ----------
 
-// Tjek at elementet findes
 console.log(document.querySelector("#hotspotskulder"));
 
-// Lyt efter når musen går over elementet
 document
   .querySelector("#hotspotskulder")
   .addEventListener("mouseover", mouseOverShoulder);
 
-// Funktion der kører når musen går over elementet
-function mouseOverShoulder() {
-  console.log("mouseOverShoulder");
-  document.querySelector("#hotspotskulder").style.fill = "blue"; // farve når musen er over
-}
-
-// Lyt efter når musen forlader elementet
 document
   .querySelector("#hotspotskulder")
   .addEventListener("mouseout", mouseOutShoulder);
 
-// Funktion der kører når musen går væk
-function mouseOutShoulder() {
-  console.log("mouseOutShoulder");
-  document.querySelector("#hotspotskulder").style.fill = "red"; // farve når musen går væk
-}
-
-// Lyt efter klik på elementet
 document
   .querySelector("#hotspotskulder")
   .addEventListener("click", clickShoulder);
+
+function mouseOverShoulder() {
+  console.log("mouseOverShoulder");
+  document.querySelector("#hotspotskulder").style.fill = "blue";
+}
+function mouseOutShoulder() {
+  console.log("mouseOutShoulder");
+  document.querySelector("#hotspotskulder").style.fill = "red";
+}
+function clickShoulder() {
+  console.log("clickShoulder");
+
+  document.querySelector("#efficiency").classList.remove("hide");
+  document.querySelector("#efficiency").classList.add("fadeIn");
+  document.querySelector("#requirement").classList.remove("hide");
+  document.querySelector("#requirement").classList.add("fadeIn");
+
+  document
+    .querySelector("#requirement")
+    .addEventListener("animationend", cleanup);
+
+  document.querySelector(".info-text h2").textContent = "Skulder";
+  document.querySelector(".info-text p").textContent =
+    "Skulderen står for støtte og balance.";
+  document.querySelector("#efficiency").innerHTML =
+    "<h3>Detaljer</h3><p>Skulderen holder sammen på systemet.</p>";
+}
+
+function cleanup() {
+  console.log("cleanup");
+  document.querySelector("#efficiency").classList.remove("fadeIn");
+  document.querySelector("#requirement").classList.remove("fadeIn");
+}
