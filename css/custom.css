@@ -1,20 +1,71 @@
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("../fonts/LEMONMILK-Bold.woff2") format("woff2"), url("../fonts/LEMONMILK-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url("../fonts/SourceCodePro-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url("../fonts/SourceCodePro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ComfortaaLight";
+  src: url("Comfortaa-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.body-text {
+  font-family: "ComfortaaLight", sans-serif;
+}
+
+/* Brug fonten sådan: */
+.code-text {
+  font-family: "SourceCodeProExtraBold", monospace;
+}
+
+.code-font-bold {
+  font-family: "SourceCodePro", monospace;
+  font-weight: 700;
+}
+
+.code-font {
+  font-family: "SourceCodePro", monospace;
+}
+
+.code-font {
+  font-family: "SourceCodePro", monospace;
+}
+
+body {
+  font-family: "InstrumentSans", sans-serif;
+}
+
 :root {
   /* Colours */
-  --color-bg: #cfceca; /* page background /*
+  --color-bg: #ffffff; /* page background /*
 
   /* Header */
-  --color-head-bg: #6f00ff;
+  --color-head-bg: #ff4242;
 
   /* Logotype */
-  --color-logotype-bg: #2a2828;
+  --color-logotype-bg: #acffcc;
   --color-text-logotype: #c1bfb8;
   --font-logotype-size: 1rem;
 
   /* Global menu */
-  --color-menu-bg: #5a5b5e;
+  --color-menu-bg: #ff4242;
   /* Links */
-  --color-link-bg: #78766e;
-  --color-link-hover: #fff; /* used */
+  --color-link-bg: #acffcc;
+  --color-link-hover: #c5ffdb; /* used */
   --color-link-active: #99958f; /* used */
   --border-radius-links: 1px;
 
@@ -24,8 +75,39 @@
   --font-h2-size: 1rem;
   --font-h3-size: 1rem;
   --color-headline-bg: #4b4545;
-  --color-headline-text-page: #42413d;
+  --color-headline-text-page: #acffcc;
 
+  .overskriftindex {
+    font-family: "Lemon Milk";
+    font-weight: bold;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 3px;
+    max-width: 640px; /* matcher Figma – smal boks */
+    margin: 0 auto; /* centrer inde i den røde sektion */
+    line-height: 1.25; /* samme højde som Figma */
+    white-space: nowrap; /* ← ingen linjeskift */
+  }
+
+  .alternativer-vm {
+    font-family: "Lemon Milk";
+    font-weight: bold;
+    color: white;
+  }
+
+  .globalkrise {
+    font-family: "Lemon Milk";
+    font-weight: bold;
+    color: white;
+  }
+
+  .h3breakingnews {
+    font-family: "Lemon Milk", sans-serif;
+    font-weight: 700;
+    font-size: 16px; /* juster efter behov */
+    text-align: center;
+  }
   /* Tekst */
   --color-text: #000;
   --color-text-inverted: #cdccc4;
@@ -37,10 +119,10 @@
   --border-radius: 5px;
 
   /* Cards */
-  --color-card-bg: #8a8585;
+  --color-card-bg: #ededed;
   --color-cta-card-bg: #d5d2d0;
   /* news-cards */
-  --color-news-bg: #dbdad4;
+  --color-news-bg: #a58d06;
   --color-news-bg-inverted: #585a5e;
   --color-cta-newscard-bg: #787473;
   --color-cta-newscard-bg-inverted: #7b7d83;
@@ -63,117 +145,7 @@
   --form-submit-size: 1rem;
 
   /* Infographics */
-  --color-info-bg: #676161;
-  --color-infobox-1-bg: #cfcec6;
-  --color-infobox-2-bg: #969995;
-}
-.form-container {
-  display: flex;
-  gap: 2rem;
-  background-color: #ffffff;
-  padding: 2rem;
-  align-items: stretch;
-}
-.form-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  border-radius: 70px;
-}
-.input-felt::placeholder {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  color: #292929;
-  opacity: 0.8; /* lidt gennemsigtig */
-}
-form input:not([type="checkbox"]) {
-  display: block;
-  width: 250px;
-  margin-top: 0px;
-  padding: 10px;
-  background-color: #a5ffcc;
-  border: none;
-}
-
-button.send {
-  background-color: #a5ffcc;
-  border: none;
-  padding: 8px 22px;
-  border-radius: 6px;
-  cursor: pointer;
-  align-items: flex-end;
-  margin-top: 40px;
-}
-
-button.tilmeld {
-  background-color: #ff6e6e;
-  border: none;
-  color: white;
-  font-size: 16px;
-  padding: 15px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  align-self: flex-start;
-}
-.nyhedsbrev-knap {
-  background-color: #ff6e6e;
-  border: none;
-  color: white;
-  font-size: 16px;
-  padding: 15px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: auto; /* Skubber knappen helt ned */
-  white-space: nowrap;
-  margin-top: auto;
-}
-/* 
-.aktiviteter-overskrift {
-  margin-bottom: 32px;
-  margin-left: 0;
-  margin-top: 0;
-  align-self: flex-start;
-  font-size: 20px;
-  font-weight: 400;
-}
-*/
-
-/* Container (valgfrit – bare pæn vertikal afstand) */
-.aktiviteter-overskrift {
-  margin: 0 0 32px; /* 0 top, 32px bund */
-  margin-top: -4px;
-}
-.aktiviteter .checkbox {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-  font-size: 16px;
-}
-
-.aktiviteter .checkbox input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid #9cffc5;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.aktiviteter .checkbox input[type="checkbox"]:checked {
-  background-color: #9cffc5;
-  border-color: #9cffc5;
-}
-
-/* Labels: checkbox til venstre, tekst til højre */
-.aktiviteter .checkbox label {
-  display: flex; /* ikke inline-flex */
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
+  --color-info-bg: #ededed;
+  --color-infobox-1-bg: #acffcc;
+  --color-infobox-2-bg: #ff7777;
 }
