@@ -1,32 +1,158 @@
-#webform {
-  background-color: var(--form-background-color);
+/* Alt herunder er kun til formularen inde i #webform */
+
+/* Container for de to sektioner */
+#register main {
+  display: block;
+  padding-left: 0;
 }
 
-#form-section,
-#form-summary {
-  background-color: var(--info-background-color);
-  padding: 0;
+#webform .form-container {
+  display: flex;
+  flex-direction: column; /* sektionerne under hinanden */
+  gap: 32px;
+  padding: 2rem 0;
+  margin: 0;
+  margin-left: -15px;
+  background: transparent;
 }
-#form-summary h2 {
-  line-height: 3rem;
+
+/* Sektionen med tekstfelter */
+#webform .form-section,
+#webform .aktiviteter {
+  width: 350px;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 25px;
+}
+
+/* Overskrift i aktiviteter */
+#webform .aktiviteter-overskrift {
+  margin: 0 0 32px;
+}
+
+/* INPUTFELTER – samme udseende som før */
+#webform .input-felt {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 14px;
+  border: 2px solid #a5ffcc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #a5ffcc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  /* font arver fra siden – menuens font ændres ikke */
+}
+
+#webform .input-felt::placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #292929;
+  opacity: 0.8;
+}
+
+#webform .input-felt:focus {
+  outline: none;
+  border-color: #a5ffcc;
+}
+
+/* kun rødt omrids hvis der er skrevet noget OG det er invalidt */
+#webform .input-felt:not(:placeholder-shown):invalid {
+  border-color: #e63946;
+  box-shadow: 0 0 4px #e63946;
+}
+
+/* fjern rød kant og skygge når valid */
+#webform .input-felt:valid {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Autofill */
+#webform input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #a5ffcc inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* NYHEDSBREV-KNAP */
+#webform .nyhedsbrev-knap {
+  background-color: #ff6e6e;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+  max-width: 250px;
+  width: 100%;
   text-align: center;
-  background-color: var(--headline-bg-color-inverted);
-  color: var(--headline-color-inverted);
-  padding-top: 5px;
+  transition: background-color 0.4s ease, transform 0.3s ease;
 }
-#form-summary h3 {
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  font-weight: 600;
+
+#webform .nyhedsbrev-knap:hover {
+  background-color: #ff3442;
+  transform: translateY(-2px);
+}
+
+/* SEND-KNAP */
+#webform .send {
+  background-color: #a5ffcc;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+#webform .send:hover {
+  background-color: #5fffa4;
+  transform: translateY(-2px);
+}
+
+/* AKTIVITETS-CHECKBOXES */
+#webform .aktiviteter .checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  font-size: 16px;
+}
+
+#webform .aktiviteter .checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
-#form-summary > *:not(:first-child) {
-  margin: 0 clamp(1rem, 10%, 7rem);
+
+#webform .aktiviteter .checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #9cffc5;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-#form-summary p {
-  font-size: 0.8rem;
-  line-height: 1.3;
-  margin: 0 0 1.2rem 0;
-  padding: 0;
+
+#webform .aktiviteter .checkbox input[type="checkbox"]:checked {
+  background-color: #9cffc5;
+  border-color: #9cffc5;
+}
+.h1forms {
+  font-family: "Lemon Milk";
+  src: url("../fonts/LEMONMILK-Bold.woff2") format("woff2"), url("../fonts/LEMONMILK-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  color: white;
 }

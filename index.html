@@ -1,119 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/burger.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
-  </head>
-  <body id="frontpage">
-    <header>
-      <nav>
-        <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
-        </div>
-        <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
-        </ul>
-        <button class="burger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-      </nav>
-    </header>
-    <section id="main-disclamer">
-      <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
-        <div>
-          <h1>OVERSKRIFT</h1>
-          <p class="sub">Underrubrik</p>
-        </div>
-      </div>
-    </section>
-    <main>
-      <section id="daily">
-        <article class="daily_card">
-          <img src="" alt="teaser_img" />
-          <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
-          </div>
-        </article>
-        <article class="daily_card">
-          <img src="" alt="teaser_img" />
-          <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
-          </div>
-        </article>
-      </section>
-      <section id="breaking">
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-      </section>
-    </main>
 
-    <footer>
-      <nav class="some">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="another">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="yetanother">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-    </footer>
-    <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/burger.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/infographic.css" />
+
+  <link rel="icon" type="image/png" href="img/fav.png" />
+  <title>Emergency Site</title>
+</head>
+
+<body id="frontpage">
+  <header>
+    <nav>
+      <a href="index.html" id="logotype-wrapper" class="logo">
+        <img src="img/logo.png" alt="">
+      </a>
+
+      <ul class="menu">
+        <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
+        <li><a class="menuItem" href="register.html">Indberet</a></li>
+      </ul>
+      <button class="burger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </nav>
+  </header>
+  <section id="main-disclamer">
+    <div id="main-disclamer-content">
+      <!-- <img src="warning" alt="ICON" /> -->
+      <div>
+        <main id="index">
+          <h1 class="globalkrise">
+            GLOBAL KRISE! INTET FODBOLD HENOVER SOMMEREN!
+          </h1>
+          <button id="theme-toggle" class="slider-toggle">
+            <div class="knob"></div>
+          </button>
+        </main>
+
+
+        <!-- <p class="sub">Underrubrik</p> -->
+      </div>
+    </div>
+  </section>
+  <main>
+    <section id="daily">
+      <article class="daily_card">
+        <img src="img/mandgammel.png" alt="">
+        <div class="daily_text">
+          <h2>Enkle råd til en sjovere og mere aktiv hverdag</h2>
+          <p>
+            Få et hurtigt overblik over små ting, der kan gøre en stor forskel i hverdagen.
+            Uanset om du savner bolden på skærmen eller bare mangler lidt inspiration, får du her lette og overskuelige
+            idéer til
+            aktiviteter, fællesskab og velvære – lige til at bruge med det samme.
+          </p>
+          <a href="instruction.html" class="cta_btn">Se mere</a>
+        </div>
+      </article>
+      <article class="daily_card">
+        <img src="" alt="teaser_img" />
+        <div class="daily_text">
+          <h2>Er sommeren ruineret?</h2>
+          <p>
+            Bare Rolig! Skriv dig op til vores nyhedsbrev og få fantastiske tilbud til aktiviteter de kommende uger, nu
+            hvor
+            VM ikke er i fjerneren.
+          </p>
+          <a href="register.html" class="cta_btn">Se mere</a>
+        </div>
+      </article>
+    </section>
+
+
+    <section id="breaking">
+
+      <article class="news_card">
+        <h3 class="h3breakingnews">VM aflyst, men.. hvorfor?.</h3>
+
+        <img src="img/ChatGPT Image 12. nov. 2025, 10.57.14.png" alt="news_img">
+        <p>Få en rolig og enkel forklaring på, hvorfor VM pludseligt blev aflyst – uden forvirring og uden stress.</p>
+        <button id="cta_open1" class="cta_btn" popovertarget="popup">Læs mere</button>
+
+        <div>
+          <div popover id="popup">
+            <img src="img/ChatGPT Image 12. nov. 2025, 10.57.14.png" alt=""
+              style="max-width:300px; width:100%; height:auto;">
+            <h2 class="popup_h2">Hvorfor skete det egentlig?</h2>
+            <h3 class="popup_h3">Beslutningen blev truffet fordi..</h3>
+            <p>Aflysningen af VM kan virke pludselig, men der ligger nogle helt konkrete årsager bag. Her forklares
+              beslutningen på en
+              rolig og letforståelig måde, så du kan følge med uden at blive overvældet. Formålet er, at du skal føle
+              dig
+              velinformeret og tryg ved, hvad der er sket – uden komplicerede forklaringer eller unødigt drama.</p>
+            <h3 class="popup_h3">Hvad betyder det for dig?</h3>
+            <p>Selvom turneringen ikke bliver afholdt, betyder det ikke, at du står uden spænding, fællesskab eller
+              aktiviteter. I
+              denne del gennemgår vi, hvad aflysningen betyder i praksis, og hvordan du stadig kan holde dig aktiv og
+              engageret. Det
+              handler om at skabe overblik og vise, at der stadig er masser af gode oplevelser i vente..</p>
+            <button id="close_btn" popovertarget="popup" popovertargetaction="hide">LUK</button>
+
+          </div>
+        </div>
+
+      </article>
+
+
+
+      <article class="news_card">
+        <h3 class="h3breakingnews">Hvad sker der nu?</h3>
+
+
+        <img src="img/ChatGPT Image 13. nov. 2025, 11.19.16.png" alt="">
+        <p>Se hvad der kommer til at ske fremover, og hvordan du nemt kan følge med i de ændringer, der sker efter
+          aflysningen.</p>
+
+        <button id="cta_open1" class="cta_btn" popovertarget="popup2">Læs mere</button>
+
+        <div>
+          <div popover id="popup2">
+
+            <img src="img/ChatGPT Image 13. nov. 2025, 11.19.16.png" alt=""
+              style="max-width:300px; width:100%; height:auto;">
+
+            <h2 class="popup_h2">Hvad det betyder for dig. </h2>
+
+            <h3 class="popup_h3">De vigtigste ændringer fremadrettet</h3>
+            <p class="popup_p">
+              Når aktiviteter bliver aflyst, er det let at føle sig lidt alene.
+              Derfor har vi startet et telefonfællesskab, hvor du kan ringe og få en
+              hyggelig snak med en anden deltager.
+            </p>
+            <h3 class="popup_h3">Hvad sker der nu?</h3>
+            <p class="popup_p">
+              Når en stor begivenhed som VM ændres, følger der automatisk nogle justeringer bagefter. Her får du en
+              overskuelig
+              gennemgang af, hvad der sker i den kommende periode – helt uden tunge detaljer. Målet er, at du hurtigt
+              kan forstå
+              situationen og føle dig godt klædt på til det, der kommer.
+            </p>
+            <h3 class="popup_h3">Nye muligheder i stedet for VM</h3>
+            <p class="popup_p">
+              Selvom boldene bliver liggende i skabet, stopper fællesskabet ikke. I stedet åbner der sig nye
+              aktiviteter,
+              arrangementer og oplevelser, som er skabt netop for at holde humøret oppe og bringe folk sammen. Her kan
+              du læse om,
+              hvad du kan deltage i, og hvorfor mange faktisk oplever, at der opstår helt nye fællesskaber, når noget
+              stort bliver
+              aflyst.
+            </p>
+            <button id="close_btn" popovertarget="popup2" popovertargetaction="hide">LUK</button>
+
+          </div>
+        </div>
+      </article>
+
+
+      <article class="news_card">
+        <h3 class="h3breakingnews">Hold dig tryg og informeret</h3>
+        <img src="img/ChatGPT Image 13. nov. 2025, 11.21.30.png" alt="">
+        <p>Lær hvor du trygt kan følge med i opdateringerne – alt samlet ét sted, så du altid er velinformeret.</p>
+        <button id="cta_open1" class="cta_btn" popovertarget="popup3">Læs mere</button>
+
+        <div>
+          <div popover id="popup3">
+
+            <img src="img/ChatGPT Image 13. nov. 2025, 11.21.30.png" alt=""
+              style="max-width:300px; width:100%; height:auto;">
+
+            <h2 class="popup_h2">Sådan får du de vigtigste opdateringer</h2>
+
+            <h3 class="popup_h3">En rolig guide til de næste uger</h3>
+
+            <p class="popup_p">
+              Når der sker ændringer i store begivenheder, kan det være svært at finde ud af, hvem man skal lytte til,
+              og hvor man
+              skal holde sig orienteret. Her får du en enkel guide til, hvor du finder de vigtigste beskeder og
+              opdateringer, så du
+              aldrig går glip af noget vigtigt – og kan føle dig rolig og velinformeret.
+            </p>
+
+            <h3 class="popup_h3">Hvor finder du mere hjælp og viden?</h3>
+            <p class="popup_p">
+              Hvis du ønsker at dykke lidt dybere ned i, hvad der foregår, eller bare gerne vil være sikker på, at du
+              får de rette
+              oplysninger, finder du her en række anbefalinger til troværdige kilder. Det er steder, hvor alt er samlet
+              ét sted, og
+              hvor du kun får information, der er relevant og til at håndtere – uden forvirring.
+            </p>
+
+            <h3 class="popup_h3">Små ritualer giver ro</h3>
+            <p class="popup_p">
+              Tag kaffen med i en termokop og gør det til en vane at gå ud hver dag. Den friske luft gør godt for både
+              kroppen og
+              humøret.
+            </p>
+
+            <h3 class="popup_h3">Et fællesskab i det fri</h3>
+            <p class="popup_p">
+              Vil du gerne have selskab, kan du melde dig til gåture med snak – en lille gruppe, der mødes én gang om
+              ugen og går i
+              roligt tempo.
+            </p>
+
+            <button id="close_btn" popovertarget="popup3" popovertargetaction="hide">LUK</button>
+
+          </div>
+        </div>
+
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="some">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="another">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="yetanother">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/burger.js"></script>
+  <script src="js/dialog.js"></script>
+  <script src="js/darkmode.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+</body>
+
 </html>
